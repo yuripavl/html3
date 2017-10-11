@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+ <meta charset="UTF-8">
+ <title>Document</title>
+ <link rel="import" href="for-import1.html">
+ <link rel="import" href="for-import2.html">
+</head>
+
+<body onload="">
+ <h1>Импорты</h1>
+
+ <script>
+  var link = document.querySelectorAll('link[rel=import]');
+  var content1 = link[0].import.querySelector('message-info1');
+  document.body.appendChild(content1.cloneNode(true));
+  var content2 = link[1].import.querySelector('message-info2');
+  document.body.appendChild(content2.cloneNode(true));
+ </script>
+</body>
+
+</html>
